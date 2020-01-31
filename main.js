@@ -5,13 +5,7 @@ $(document).ready(function() {
    url: "https://flynn.boolean.careers/exercises/api/array/music",
    method: "GET",
    success: function (data, stato) {
-     for(var i = 0; i < 6; i++){
-
-       console.log('CD number '+ [i+1] + JSON.stringify(data.response[i]));
-       console.log('Genere = ' + data.response[i].genre);
-
-
-     }
+     selectGenr(data);
      readCd(data.response);
 
      },
@@ -30,6 +24,19 @@ $(document).ready(function() {
 
      $('.cds-container').append(html);
    }
+ }
+
+ function selectGenr(dates){
+   for(var i = 0; i < 6; i++){
+     var cdString = JSON.stringify(dates.response[i])
+     console.log('CD number '+ [i+1] + cdString);
+     console.log('CD number '+ [i+1] + ' genere = ' + dates.response[i].genre);
+
+
+   }
+
+
+
  }
 
 });
