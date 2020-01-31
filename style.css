@@ -32,8 +32,15 @@ header img {
     align-items: center;
     flex-wrap: wrap;
     padding: 100px 0;
+    position: relative;
 }
 
+select{
+  position: absolute;
+  top: 0;
+  width: 300px;
+
+}
 .cd {
     display: flex;
     justify-content: flex-start;
