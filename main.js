@@ -28,14 +28,19 @@ $(document).ready(function() {
 
  function selectGenr(dates){
    for(var i = 0; i < 6; i++){
-     var cdString = JSON.stringify(dates.response[i])
-     console.log('CD number '+ [i+1] + cdString);
-     console.log('CD number '+ [i+1] + ' genere = ' + dates.response[i].genre);
-
-
+     // var cdString = JSON.stringify(dates.response[i])
+     // console.log('CD number '+ [i+1] + cdString);
+     var genre = dates.response[i].genre;
+     console.log(genre);
+     console.log('CD number '+ [i+1] + ' genere = ' + genre);
    }
-
-
+   // var select = $( ".myselection" ).val();
+   // console.log(select);
+   //
+   // $('#myselection option:selected').click(function(){
+   //   var read = $(this).text();
+   //   console.log(read);
+   // });
 
  }
 
